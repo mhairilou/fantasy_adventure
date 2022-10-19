@@ -14,5 +14,14 @@ public class Knight extends AbstractFighter {
         return "Ni!";
     }
 
+    public String useWeapon(){
+        this.getCurrentWeapon().causeDamage();
+        return "WAACHAAA!";
+    }
 
+    @Override
+    public void takeDamage(int amount) {
+        int hpAfterDamage = this.getHp() - amount;
+        this.setHp(hpAfterDamage);
+    }
 }

@@ -1,8 +1,11 @@
 package Players.Fighters;
+import Abilities.ITakeDamage;
 import Players.AbstractPlayer;
 import Weapons.AbstractWeapon;
 
-public abstract class AbstractFighter extends AbstractPlayer{
+public abstract class AbstractFighter
+        extends AbstractPlayer
+        implements ITakeDamage{
     private AbstractWeapon currentWeapon;
 
     public AbstractFighter(String name, int hp, AbstractWeapon currentWeapon){

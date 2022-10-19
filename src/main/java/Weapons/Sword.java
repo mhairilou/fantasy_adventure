@@ -1,6 +1,7 @@
 package Weapons;
 
 import Abilities.ICauseDamage;
+import Abilities.ITakeDamage;
 
 public class Sword extends AbstractWeapon {
 
@@ -10,8 +11,8 @@ public class Sword extends AbstractWeapon {
     }
 
     @Override
-    public void causeDamage() {
-
+    public void causeDamage(ITakeDamage opponent) {
+        opponent.takeDamage(this.power);
     }
 
 

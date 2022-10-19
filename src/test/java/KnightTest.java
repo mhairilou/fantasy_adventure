@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class KnightTest {
 
     Knight knight;
+    Knight knight2;
     Sword sword;
     Sword sword2;
 
@@ -16,6 +17,7 @@ public class KnightTest {
         sword = new Sword(30);
         sword2 = new Sword(40);
         knight = new Knight("Arthur", 100, sword);
+        knight2 = new Knight("Day", 120, sword2);
     }
 
     @Test
@@ -45,6 +47,21 @@ public class KnightTest {
         assertEquals("Ni!", result);
     }
 
+    @Test
+    public void exclaimsWhenAttacking(){
+        assertEquals("WAACHAAA!", knight.useWeapon());
+    }
+
+    @Test
+    public void canTakeDamage(){
+        knight.takeDamage(30);
+        assertEquals(70, knight.getHp());
+    }
+
+    @Test
+    public void attackingDealsDamage(){
+        knight.useWeapon()
+    }
 
 
 

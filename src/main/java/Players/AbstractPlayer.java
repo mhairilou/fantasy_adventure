@@ -12,4 +12,5 @@ public abstract class AbstractPlayer {
 
     public String getName(){ return this.name; }
     public int getHp(){ return this.hp; }
+    public void setHp(int newHp){ this.hp = newHp; }
 }
