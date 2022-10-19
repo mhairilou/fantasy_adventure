@@ -49,7 +49,7 @@ public class KnightTest {
 
     @Test
     public void exclaimsWhenAttacking(){
-        assertEquals("WAACHAAA!", knight.useWeapon());
+        assertEquals("WAACHAAA!", knight.useWeapon(knight2));
     }
 
     @Test
@@ -60,7 +60,8 @@ public class KnightTest {
 
     @Test
     public void attackingDealsDamage(){
-        knight.useWeapon()
+        knight.useWeapon(knight2);
+        assertEquals(90, knight2.getHp());
     }
 
 

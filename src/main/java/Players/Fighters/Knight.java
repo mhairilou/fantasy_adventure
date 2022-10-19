@@ -1,5 +1,7 @@
 package Players.Fighters;
 
+import Abilities.ICauseDamage;
+import Abilities.ITakeDamage;
 import Weapons.AbstractWeapon;
 
 public class Knight extends AbstractFighter {
@@ -14,8 +16,8 @@ public class Knight extends AbstractFighter {
         return "Ni!";
     }
 
-    public String useWeapon(){
-        this.getCurrentWeapon().causeDamage();
+    public String useWeapon(ITakeDamage opponent){
+        this.getCurrentWeapon().causeDamage(opponent);
         return "WAACHAAA!";
     }
 
