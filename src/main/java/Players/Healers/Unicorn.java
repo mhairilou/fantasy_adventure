@@ -21,5 +21,9 @@ public class Unicorn extends AbstractPlayer implements IHeal {
     }
 
 
+    @Override
+    public void takeDamage(int amount) {
+
     }
+}
 

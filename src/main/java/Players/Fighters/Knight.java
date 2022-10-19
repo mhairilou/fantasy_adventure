@@ -21,10 +21,4 @@ public class Knight extends AbstractFighter {
         return "WAACHAAA!";
     }
 
-    @Override
-    public void takeDamage(int amount) {
-        int hpAfterDamage = this.getHp() - amount;
-        if(hpAfterDamage < 0){ hpAfterDamage = 0;}
-        this.setHp(hpAfterDamage);
-    }
 }

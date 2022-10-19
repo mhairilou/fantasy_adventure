@@ -1,6 +1,8 @@
 package Spells;
 
-public class AbstractSpell {
+import Players.AbstractPlayer;
+
+public abstract class AbstractSpell {
 
     String incantation;
     int power;
@@ -17,4 +19,6 @@ public class AbstractSpell {
     public int getPower() {
         return power;
     }
+
+  public abstract void use(AbstractPlayer player);
 }
