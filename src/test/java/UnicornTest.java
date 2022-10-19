@@ -35,8 +35,14 @@ public class UnicornTest {
     }
 
     @Test
-    public void canHeal(){
+    public void canHealOthers(){
         unicorn.heal(knight);
         assertEquals(60, knight.getHp());
+    }
+
+    @Test
+    public void canHealSelf(){
+        unicorn.heal(unicorn);
+        assertEquals(520, unicorn.getHp());
     }
 }

@@ -8,8 +8,8 @@ public abstract class AbstractFighter
         implements ITakeDamage{
     private AbstractWeapon currentWeapon;
 
-    public AbstractFighter(String name, int maxHp, AbstractWeapon currentWeapon){
-        super(name, maxHp);
+    public AbstractFighter(String name, int hp, AbstractWeapon currentWeapon){
+        super(name, hp);
         this.currentWeapon = currentWeapon;
     }
 

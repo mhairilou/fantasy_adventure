@@ -6,8 +6,8 @@ import Weapons.AbstractWeapon;
 public class Barbarian extends AbstractFighter{
 
 
-    public Barbarian(String name, int maxHP, AbstractWeapon currentWeapon){
-        super(name, maxHP, currentWeapon);
+    public Barbarian(String name, int hp, AbstractWeapon currentWeapon){
+        super(name, hp, currentWeapon);
     }
 
 
