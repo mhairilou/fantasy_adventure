@@ -19,7 +19,7 @@ public class HealingSpell extends AbstractSpell implements IHeal {
     }
 
     @Override
-    public void use(AbstractPlayer player) {
+    public void cast(AbstractPlayer player) {
         heal(player);
     }
 }

@@ -46,8 +46,10 @@ public class WizardTest {
         assertEquals(12, unicorn.getHp());
     }
 
-//    @Test
-//    public void canChangeSpell(){
-//        wizard.setCurrentSpell();
-//    }
+    @Test
+    public void canChangeSpell(){
+        wizard.setCurrentSpell(spell2);
+        assertEquals("Blowupus maximus", wizard.getCurrentSpell().getIncantation());
+    }
+    
 }

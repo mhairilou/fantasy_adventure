@@ -21,6 +21,6 @@ public class Wizard extends AbstractMage{
     }
 
     public void castSpellOn(AbstractPlayer player){
-        this.getCurrentSpell().use(player);
+        this.getCurrentSpell().cast(player);
     }
 }

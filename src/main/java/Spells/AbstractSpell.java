@@ -20,5 +20,5 @@ public abstract class AbstractSpell {
         return power;
     }
 
-  public abstract void use(AbstractPlayer player);
+  public abstract void cast(AbstractPlayer player);
 }
