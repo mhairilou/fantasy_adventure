@@ -5,14 +5,16 @@ import Abilities.ITakeDamage;
 
 public class Sword extends AbstractWeapon {
 
-
-    public Sword(int power){
+    int sharpness;
+    public Sword(int power, int sharpness){
         super(power);
+        this.sharpness = sharpness;
     }
 
     @Override
     public void causeDamage(ITakeDamage opponent) {
-        opponent.takeDamage(this.power);
+        int damage = this.power * (this.sharpness /100);
+        opponent.takeDamage(damage);
     }
 
 

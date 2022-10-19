@@ -14,8 +14,8 @@ public class KnightTest {
 
     @Before
     public void before(){
-        sword = new Sword(30);
-        sword2 = new Sword(40);
+        sword = new Sword(30, 100);
+        sword2 = new Sword(40, 100);
         knight = new Knight("Arthur", 100, sword);
         knight2 = new Knight("Day", 120, sword2);
     }
@@ -64,7 +64,11 @@ public class KnightTest {
         assertEquals(90, knight2.getHp());
     }
 
-
+    @Test
+    public void cannotHaveNegativeHP(){
+        knight.takeDamage(200);
+        assertEquals(0, knight.getHp());
+    }
 
 
 }
